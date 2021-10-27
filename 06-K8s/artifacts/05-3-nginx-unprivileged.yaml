@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-unprivileged
+spec:
+  containers:
+    - name: nginx-unprivileged
+      image: mcr.microsoft.com/oss/nginx/nginx:1.15.5-alpine
+      resources:
+        requests: # minimum resources required
+          cpu: 250m
+          memory: 64Mi
+        limits: # maximum resources allocated
+            cpu: 500m
+            memory: 256Mi
