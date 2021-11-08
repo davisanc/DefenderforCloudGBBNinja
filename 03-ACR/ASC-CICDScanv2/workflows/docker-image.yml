@@ -1,0 +1,47 @@
+# Basic worflow to test the ASC CICD Vulnerability Scanning feature (Public Preview)
+name: Vulnerable Docker image CI
+# Controls when the workflow will run (push or pull for the master branch)
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  buildScanAndPush:
+    runs-on: ubuntu-latest
+    env:
+      ACR_REPO_NAME: vulnerables/firefox
+      ACR_SERVER: myvulnerableacr.azurecr.io
+    steps:
+    # Build Docker Image
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ${{ env.ACR_SERVER }}/${{ env.ACR_REPO_NAME }}:${{ github.sha }}
+    # CICD Scan
+    - name: Scan Docker image using Azure Container Scan action
+      uses: Azure/container-scan@v0
+      id: container-scan
+      continue-on-error: true
+      with:
+        image-name: ${{ env.ACR_SERVER }}/${{ env.ACR_REPO_NAME }}:${{ github.sha }}
+        run-quality-checks: true  # run-quality-checks provides CIS benchmark assessment with Dockle
+    # Login to ACR
+    - name: Login to Azure Container Registry
+      uses: Azure/docker-login@v1
+      with:
+        login-server: ${{ env.ACR_SERVER }}
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+    # Push Scanned Image to ACR
+    - name: Push scanned image to ${{ env.ACR_REPO_NAME }}
+      run: docker push ${{ env.ACR_SERVER }}/${{ env.ACR_REPO_NAME }}:${{ github.sha }}
+    # Post Results to ASC (App Insigths)
+    - name: Post result status to Azure Security Center
+      uses: Azure/publish-security-assessments@v0
+      with:
+        artifact-type: containerImage
+        scan-provider: trivy
+        connection-string: ${{ secrets.ASC_CONNECTION_STRING }}
+        subscription-token: ${{ secrets.ASC_AUTH_TOKEN }}
+        # Do not modify ${{ steps.container-scan.outputs.scan-report-path }} as it uses this path by default in Version 0.1
+        scan-results-path: ${{ steps.container-scan.outputs.scan-report-path }}
