@@ -6,7 +6,7 @@ RUN apt-get update \
     && apt-get install -y wget \
     && rm -rf /var/lob/apt/lists/*
     
-## Install Firefox 88.0.1
+## Installing Firefox 88.0.1
 RUN apt-get purge firefox \
     && apt-get purge firefox \
     && apt-get install libgtk-3-0 -y \
