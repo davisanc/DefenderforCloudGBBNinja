@@ -1,0 +1,32 @@
+# Basic worflow to test the ASC CICD Vulnerability Scanning feature (Public Preview)
+name: Vulnerable Docker image CI
+# Controls when the workflow will run (push or pull for the master branch)
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  buildScanAndPush:
+    runs-on: ubuntu-latest
+ 
+    steps:
+  # Checkout your code repository
+    - uses: actions/checkout@v2
+     # Install dotnet
+    - uses: actions/setup-dotnet@v1
+      with:
+       dotnet-version: |
+         5.0.x
+         6.0.x
+   # Run analyzers
+    - name: Run Microsoft Security DevOps Analysis
+      uses: microsoft/security-devops-action@preview
+      id: msdo
+      with:
+        categories: 'IaC', 'trivy'
+   # Upload alerts to the Security tab
+    - name: Upload alerts to Security tab
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+       sarif_file: ${{ steps.msdo.outputs.sarifFile }}
