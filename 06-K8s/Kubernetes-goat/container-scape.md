@@ -46,5 +46,5 @@ kubectl --kubeconfig /var/lib/kubelet/kubeconfig get nodes
 
 Finally, you will see an alert showing up on the Defender for Cloud console similar to this
 
-![container-escape-alert](/06-K8s/images/container-escape.png)
+![container-escape-alert](/container-escape.PNG)
 
