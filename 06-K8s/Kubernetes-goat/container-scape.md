@@ -4,12 +4,14 @@ The goal of this scenario is to escape out of the running docker container on th
 
 After performing the analysis, you can identify that this container has full privileges of the host system and allows privilege escalation. As well as /host-system is mounted
 
-````
+```
 capsh --print
 ```
+
 ```
 mount
 ```
+
 Now you can explore the mounted file system by navigating to the /host-system path
 
 ```
