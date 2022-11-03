@@ -43,3 +43,8 @@ You are able to obtain the available nodes in the Kubernetes cluster by running 
 ```
 kubectl --kubeconfig /var/lib/kubelet/kubeconfig get nodes
 ```
+
+Finally, you will see an alert showing up on the Defender for Cloud console similar to this
+
+![container-escape-alert](/images/container-escape.PNG)
+
