@@ -1,5 +1,7 @@
 # RBAC least privileges misconfiguration
 
+---change after rename of repo---
+
 In this scenario, we will see how simple misconfiguration like this can gain access to secrets, more resources, and information
 
 We commonly see in the real world where developers and DevOps teams tend to provide extra privileges than required. This provides attackers more control and privileges than they intended to be. In this scenario, you can leverage the service account bound to the pod to provide webhookapikey access, but using this attacker can gain control over other secrets and resources
