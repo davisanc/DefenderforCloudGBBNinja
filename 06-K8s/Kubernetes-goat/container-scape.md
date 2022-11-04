@@ -1,7 +1,3 @@
-# Setup of Kubernetes Goat 
-
-from https://madhuakula.com/kubernetes-goat/
-
 The goal of this scenario is to escape out of the running docker container on the host system using the available misconfigurations. The secondary goal is to use the host system-level access to gain other resources access and if possible even go beyond this container, node, and cluster-level access
 
 After performing the analysis, you can identify that this container has full privileges of the host system and allows privilege escalation. As well as /host-system is mounted
