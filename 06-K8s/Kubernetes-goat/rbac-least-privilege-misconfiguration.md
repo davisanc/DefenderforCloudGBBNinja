@@ -88,6 +88,6 @@ echo "azhzLWdvYXQtODUwNTc4NDZhODA0NmEyNWIzNWYzOGYzYTI2NDlkY2U=" | base64 -d
 
 Soon you will be able to see the Defender alerts showing up in the portal
 
-![rbac-1](/images/rbac-1.PNG)
+![rbac-1](/images/rbac-1.png)
 
-![rbac-2](/images/rbac-2.PNG)
+![rbac-2](/images/rbac-2.png)
