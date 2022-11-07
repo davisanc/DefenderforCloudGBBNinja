@@ -47,6 +47,7 @@ nc -n -v -l -p 5555 -e /bin/bash
 Enter into the client pod and issue the netcat command
 ```
 nc <ipaddress-of-serverpod> 5555
+```
 
 and wait for the Defender alert to appear
 
