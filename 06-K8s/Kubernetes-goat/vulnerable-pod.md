@@ -1,6 +1,7 @@
 # In this lab we will use a ShellShock vulnerable docker image from the Docker Hub, store it in the Azure ACR and from there deploy to Azure AKS
 
 We will exploit Shell-Shock vulnerabilities to execute RCE from an attaker por running in the same cluster
+Defender for Cloud will show this specific vulnerability once the image is pushed to the registry (SAST) and also once the container is deployed as a kubernetes pod within your cluster (runtime detection/DAST)
 
 Login to your Azure ACR registry where you will push the vulnerable image
 
