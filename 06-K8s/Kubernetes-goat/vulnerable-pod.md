@@ -101,7 +101,7 @@ and
 curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'whoami'" http://[ip-address-shell-shock-pod]/cgi-bin/vulnerable
 ```
 
-Now, wait for Defender to raise a recommendation under the ACR to resolve vulnerabilities found
+Now, wait for Defender to raise a recommendation under the ACR to resolve vulnerabilities found. This recommendation is part of SAST scanning, once the image has been pushed to the registry the sandbox will trigger the scan of vulnerabilities
 
 ![container-vul](/images/container-vuln.png)
 
@@ -110,4 +110,7 @@ Also, you may want to use the Cloud Security Explorer with the specific CVE-ID
 
 ![container-vuln-cloudsecexplorer](/images/container-vuln-cloud-sec-explorer.png)
 
+From a DAST, vulnerable images can also be scanned by the runtime detection capabilities of Defender. Look for a recommendation like 'Running container images should have vulnerability findings resolved' and search for the specific CVE-ID of Shellshock
 
+![running-container-vuln](/images/running-vulnerable-container.png)
+ 
