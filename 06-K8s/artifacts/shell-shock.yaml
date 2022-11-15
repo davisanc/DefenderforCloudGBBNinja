@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shell-shock
+spec:
+  selector:
+    matchLabels:
+      app: shell-shock
+  template:
+    metadata:
+      labels:
+        app: shell-shock # the label for the pods and the deployments
+    spec:
+      containers:
+      - name: shell-shock
+        image: k8sgoatacr.azurecr.io/cve-2014-6271:latest # IMPORTANT: update with your own repository
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080 
