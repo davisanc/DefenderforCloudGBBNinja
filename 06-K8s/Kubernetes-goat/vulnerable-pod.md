@@ -18,7 +18,7 @@ docker pull vulnerables/cve-2014-6271
 Run the following commands to properly tag your images to match your ACR account name.
 
 ```
- docker tag  vulnerables/cve-2014-6271  [ACR-LOGINSERVER]/
+ docker tag  vulnerables/cve-2014-6271  [ACR-LOGINSERVER]/cve-2014-6271:latest
  
  ```
 
