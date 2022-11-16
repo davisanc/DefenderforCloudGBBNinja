@@ -4,7 +4,7 @@ Running the process inside of a container as the root user is a common misconfig
 
 From a view in Defender for Cloud, you can pivot to one of your Kubernetes cluster and look for a recommendation that shows if a cluster runs containers as root mode
 
-![container as root](/images/container-as-root.PNG)
+![container as root](/images/container-as-root.png)
 
 Insecure configurations such as this one is seen as one of the OWASP Top 10 misconfigurations for Kubernetes
 https://github.com/OWASP/www-project-kubernetes-top-ten/blob/main/2022/en/src/K01-insecure-workload-configurations.md
@@ -35,10 +35,10 @@ We will have an Azure Policy that denies the creation of such container. We will
 Kubernetes cluster pods and containers should only run with approved user and group IDs
 ```
 
-![azure policy as non root](/images/azure-policy-nonroot.PNG)
+![azure policy as non root](/images/azure-policy-nonroot.png)
 
 And assign the policy definition to your scope
 
 In Github, we will have a workflow (action) that will use the pod manifest file that creates the container as root mode. We run the action and Azure policy should deny this effect
 
-![container as root](/images/container-as-root.PNG)
+![container as root](/images/gh-action-container-root.png)
