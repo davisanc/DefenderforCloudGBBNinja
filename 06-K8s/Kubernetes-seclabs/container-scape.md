@@ -2,14 +2,13 @@ The goal of this scenario is to escape out of the running docker container on th
 
 The secondary goal is to use the host system-level access to gain other resources access and if possible even go beyond this container, node, and cluster-level access
 
-After performing the analysis, you can identify that this container has full privileges of the host system and allows privilege escalation. As well as /host-system is mounted
-
 ### Pod to use in this lab
 system-monitor
 ### Misconfiguration: 
 Sensitive Mount, the full host system / volume is mounted in the pod, in /host-system
 
 
+After performing the analysis, you can identify that this container has full privileges of the host system and allows privilege escalation. As well as /host-system is mounted
 
 ```
 capsh --print
