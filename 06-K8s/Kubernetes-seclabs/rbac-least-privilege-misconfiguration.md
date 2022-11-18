@@ -4,7 +4,12 @@ In this scenario, we will see how simple misconfiguration like this can gain acc
 
 We commonly see in the real world where developers and DevOps teams tend to provide extra privileges than required. This provides attackers more control and privileges than they intended to be. In this scenario, you can leverage the service account bound to the pod to provide webhookapikey access, but using this attacker can gain control over other secrets and resources
 
-## The goal: Find the k8s_goat_flag flag value by gaining access to the Kubernetes secret k8svaultapikey by exploiting the RBAC privileges to complete this scenario
+### Pod to work on: 
+hunger-check
+### Micconfiguration:
+This deployment has a custom ServiceAccount mapped with an overly permissive policy/privilege. As an attacker, we can leverage this to gain access to other resources and services
+
+### The goal: Find the Kubernetes secret k8svaultapikey by exploiting the RBAC privileges to complete this scenario
 
 Run the following command using the name of your hunger-check-pod which runs ion the big-monolith namespace
 
