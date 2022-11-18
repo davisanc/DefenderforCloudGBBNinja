@@ -1,6 +1,11 @@
-The goal of this scenario is to escape out of the running docker container on the host system using the available misconfigurations. The secondary goal is to use the host system-level access to gain other resources access and if possible even go beyond this container, node, and cluster-level access
+The goal of this scenario is to escape out of the running docker container on the host system using the available misconfigurations. 
+
+The secondary goal is to use the host system-level access to gain other resources access and if possible even go beyond this container, node, and cluster-level access
 
 After performing the analysis, you can identify that this container has full privileges of the host system and allows privilege escalation. As well as /host-system is mounted
+
+## Pod to use in this lab: system-monitor
+## Misconfiguration: Sensitive Mount, the full host system / volume is mounted in the pod, in /host-system
 
 ```
 capsh --print
@@ -16,7 +21,7 @@ Now you can explore the mounted file system by navigating to the /host-system pa
 ls /host-system/
 ```
 
-You can gain access to the host system privileges using chroot
+Escape to the node, gainining access to the host system privileges using chroot. We also launch bash from this command
 
 ```
 chroot /host-system bash
@@ -40,7 +45,16 @@ You are able to obtain the available nodes in the Kubernetes cluster by running 
 kubectl --kubeconfig /var/lib/kubelet/kubeconfig get nodes
 ```
 
-Finally, you will see an alert showing up on the Defender for Cloud console similar to this
+We could also start SSH server to allow remote access
+
+And finally, remove your traces by deleting bash history
+
+```
+rm -rf ~/.bash_history
+```
+
+
+Very soon you will see an alert showing up on the Defender for Cloud console similar to this
 
 
 ![container-escape-alert](/images/container-escape-alert.PNG)
