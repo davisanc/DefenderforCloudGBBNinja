@@ -2,7 +2,7 @@
 
 CAP_SYS_ADMIN allows to perform a range of system administration operations, privileged ones that cannot be performed by a normal user
 
-This capability is default by default in a Kubernetes cluster, unless explicity enabled in the pod definition file 
+This capability is disabled by default in a Kubernetes cluster, unless explicity enabled in the pod definition file 
 
 We will use this Pod definition file to allow bind this permission in one of our pods
 
