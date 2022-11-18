@@ -7,7 +7,21 @@ We commonly see in the real world where developers and DevOps teams tend to prov
 ### Pod to work on: 
 hunger-check
 ### Micconfiguration:
-This deployment has a custom ServiceAccount mapped with an overly permissive policy/privilege. As an attacker, we can leverage this to gain access to other resources and services
+This deployment has a custom ServiceAccount mapped with an overly permissive policy/privilege. This permissions granted by an RBAC role will give the pod access to all this:
+
+```
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: big-monolith
+  name: secret-reader
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["*"] # all the resources
+  verbs: ["get", "watch", "list"]
+```
+
+As an attacker, we can leverage this to gain access to other resources and services
 
 ### The goal: Find the Kubernetes secret k8svaultapikey by exploiting the RBAC privileges to complete this scenario
 
