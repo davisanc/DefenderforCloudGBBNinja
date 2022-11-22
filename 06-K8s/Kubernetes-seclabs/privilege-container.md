@@ -36,7 +36,7 @@ kubectl exec -it <name-of-priv-container> -- /bin/bash
 Now we will try to mount the volumes from the host OS into the container, in a privileged container this is possible not in a normal container
 
 ```
- mount /dev/sda1 /mtn
+ mount /dev/sda1 /mnt
  ```
 
 ```
