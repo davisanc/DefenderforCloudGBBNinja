@@ -31,7 +31,7 @@ docker tag vulnerables/cve-2014-6271 <aws-accountID>.dkr.ecr.<aws-region>.amazon
 Finally, push the image to the registry
 
 ```
-docker push <aws-accountUD>.dkr.ecr.<aws-region>.amazonaws.com/<aws-ecr-name>:cve-2014-6271
+docker push <aws-accountID>.dkr.ecr.<aws-region>.amazonaws.com/<aws-ecr-name>:cve-2014-6271
 ```
 
 In max of 2 hours Defender will show a recommendation to fix the vulnerability findings of your AWS ECR. This recommendation is part of SAST scanning, once the image has been pushed to the registry the sandbox will trigger the scan of vulnerabilities
