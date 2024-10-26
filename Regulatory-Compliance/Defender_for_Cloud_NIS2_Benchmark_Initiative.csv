@@ -1,0 +1,35 @@
+﻿Policy Display Name,Effect,Category,Policy Group
+Email notification for high severity alerts should be enabled,AuditIfNotExists,Built-in,Incident Handling
+A vulnerability assessment solution should be enabled on your virtual machines,AuditIfNotExists,Built-in,Vulnerability Handling and disclosures
+SQL servers on machines should have vulnerability findings resolved,AuditIfNotExists,Built-in,Vulnerability Handling and disclosures
+Azure registry container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management),AuditIfNotExists,Built-in,Vulnerability Handling and disclosures
+Azure running container images should have vulnerabilities resolved (powered by Microsoft Defender Vulnerability Management),AuditIfNotExists,Built-in,Vulnerability Handling and disclosures
+Kubernetes cluster containers should only use allowed images,Deny,Built-in,Supply Chain Security
+Linux machines should meet requirements for the Azure compute security baseline,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Windows machines should meet requirements of the Azure compute security baseline,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost.,AuditIfNotExists,Built-in,Use of cryptography and encryption
+Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost.,AuditIfNotExists,Built-in,Use of cryptography and encryption
+Virtual machines and virtual machine scale sets should have encryption at host enabled,Audit,Built-in,Use of cryptography and encryption
+Azure Backup should be enabled for Virtual Machines,AuditIfNotExists,Built-in,Business Continuity and Crisis Management
+[Preview]: Azure Backup should be enabled for Managed Disks,AuditIfNotExists,Built-in,Business Continuity and Crisis Management
+Geo-redundant backup should be enabled for Azure Database for PostgreSQL,Audit,Built-in,Business Continuity and Crisis Management
+Geo-redundant backup should be enabled for Azure Database for MySQL,Audit,Built-in,Business Continuity and Crisis Management
+Geo-redundant backup should be enabled for Azure Database for MariaDB,Audit,Built-in,Business Continuity and Crisis Management
+GitHub repositories should have code scanning enabled,Audit,Custom,Supply Chain Security
+GitHub repositories should have secret scanning enabled,Audit,Custom,Supply Chain Security
+Windows machines should be configured to use secure communication protocols,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+App Service apps should require FTPS only,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Function apps should only be accessible over HTTPS,Audit,Built-in,Basic Cybersecurity hygiene
+Kubernetes clusters should be accessible only over HTTPS,Deny,Built-in,Basic Cybersecurity hygiene
+Function apps should require FTPS only,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Accounts with owner permissions on Azure resources should be MFA enabled,AuditIfNotExists,Built-in,Use of MFA or continuous authentication
+Accounts with write permissions on Azure resources should be MFA enabled,AuditIfNotExists,Built-in,Use of MFA or continuous authentication
+Configure secure transfer of data on a storage account,Modify,Built-in,Basic Cybersecurity hygiene
+Azure Defender for servers should be enabled,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Windows Defender Exploit Guard should be enabled on your machines,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Azure Backup should be enabled for Virtual Machines,AuditIfNotExists,Built-in,Business Continuity and Crisis Management
+Accounts with owner permissions on Azure resources should be MFA enabled,AuditIfNotExists,Built-in,Use of MFA or continuous authentication
+Accounts with write permissions on Azure resources should be MFA enabled,AuditIfNotExists,Built-in,Use of MFA or continuous authentication
+Accounts with owner permissions on Azure resources should be MFA enabled,AuditIfNotExists,Built-in,Use of MFA or continuous authentication
+Guest accounts with owner permissions on Azure resources should be removed,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
+Guest accounts with write permissions on Azure resources should be removed,AuditIfNotExists,Built-in,Basic Cybersecurity hygiene
