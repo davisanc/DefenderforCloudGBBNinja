@@ -1,0 +1,388 @@
+{
+  "properties": {
+    "displayName": "NIS2-Initiative",
+    "policyType": "Custom",
+    "description": "",
+    "metadata": {
+      "category": "NIS2",
+      "ASC": "true"
+    },
+    "version": "1.0.0",
+    "parameters": {},
+    "policyDefinitions": [
+      {
+        "policyDefinitionReferenceId": "Email notification for high severity alerts should be enabled_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6e2593d9-add6-4083-9c9b-4b7d2188c899",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Incident Handling"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "A vulnerability assessment solution should be enabled on your virtual machines_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/501541f7-f7e7-4cd6-868c-4190fdad3ac9",
+        "definitionVersion": "3.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "SQL servers on machines should have vulnerability findings resolved_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6ba6d016-e7c3-4842-b8f2-4992ebc0d72d",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Azure registry container images should have vulnerabilities resolved (powered by Microsoft Defender _1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/090c7b07-b4ed-4561-ad20-e9075f3ccaff",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Azure running container images should have vulnerabilities resolved (powered by Microsoft Defender V_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/17f4b1cc-c55c-4d94-b1f9-2978f6ac2957",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Kubernetes cluster containers should only use allowed images_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/febd0533-8e55-448f-b837-bd0e06f16469",
+        "definitionVersion": "9.*.*",
+        "parameters": {
+          "allowedContainerImagesRegex": {
+            "value": "*."
+          }
+        },
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Linux machines should meet requirements for the Azure compute security baseline_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fc9b3da7-8347-4380-8e70-0a0361d8dedd",
+        "definitionVersion": "2.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Windows machines should meet requirements of the Azure compute security baseline_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/72650e9f-97bc-4b2a-ab5f-9781a9fcecbc",
+        "definitionVersion": "2.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Vulnerability Handling and disclosures"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Windows virtual machines should enable Azure Disk Encryption or EncryptionAtHost._1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/3dc5edcd-002d-444c-b216-e123bbfa37c0",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Linux virtual machines should enable Azure Disk Encryption or EncryptionAtHost._1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ca88aadc-6e2b-416c-9de2-5a0f01d1693f",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Virtual machines and virtual machine scale sets should have encryption at host enabled_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/fc4d8e41-e223-45ea-9bf5-eada37891d87",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Azure Backup should be enabled for Virtual Machines_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/013e242c-8828-4970-87b3-ab247555486d",
+        "definitionVersion": "3.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Business Continuity and Crisis Management"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "[Preview]: Azure Backup should be enabled for Managed Disks_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/a25a41a7-a769-4271-841d-7ce0297be0c0",
+        "definitionVersion": "1.*.*-preview",
+        "parameters": {},
+        "groupNames": [
+          "Business Continuity and Crisis Management"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for PostgreSQL_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/48af4db5-9b8b-401c-8e74-076be876a430",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Business Continuity and Crisis Management"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for MySQL_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/82339799-d096-41ae-8538-b108becf0970",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Business Continuity and Crisis Management"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Geo-redundant backup should be enabled for Azure Database for MariaDB_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0ec47710-77ff-4a3d-9181-6aa50af424d0",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Business Continuity and Crisis Management"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "GitHub repositories should have code scanning findings resolved_1",
+        "policyDefinitionId": "/subscriptions/1fc00f4d-a938-4e4c-96c5-6446cd536471/providers/Microsoft.Authorization/policyDefinitions/3413e4be-a361-4031-9ce0-6f51c47aa3ee",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Supply Chain Security"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "GitHub repositories should have secret scanning enabled_1",
+        "policyDefinitionId": "/subscriptions/1fc00f4d-a938-4e4c-96c5-6446cd536471/providers/Microsoft.Authorization/policyDefinitions/d8990d1e-b752-4e13-b368-7c62d53d3dd5",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Supply Chain Security"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Windows machines should be configured to use secure communication protocols_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5752e6d6-1206-46d8-8ab1-ecc2f71a8112",
+        "definitionVersion": "4.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "App Service apps should require FTPS only_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4d24b6d4-5e53-4a4f-a7f4-618fa573ee4b",
+        "definitionVersion": "3.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Function apps should only be accessible over HTTPS_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/6d555dd1-86f2-4f1c-8ed7-5abae7c6cbab",
+        "definitionVersion": "5.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Kubernetes clusters should be accessible only over HTTPS_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1a5b4dca-0b6f-4cf5-907c-56316bc1bf3d",
+        "definitionVersion": "8.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Function apps should require FTPS only_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/399b2637-a50f-4f95-96f8-3a145476eb15",
+        "definitionVersion": "3.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of cryptography and encryption"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Accounts with owner permissions on Azure resources should be MFA enabled_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Accounts with write permissions on Azure resources should be MFA enabled_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Establish a password policy_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/d8bbd80e-3bb1-5983-06c2-428526ec6a63",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Configure secure transfer of data on a storage account_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/f81e3117-0093-4b17-8a60-82363134f0eb",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Azure Defender for servers should be enabled_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/4da35fc9-c9e7-4960-aec9-797fe7d9051d",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Windows Defender Exploit Guard should be enabled on your machines_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/bed48b13-6647-468e-aa2f-1af1d3f4dd40",
+        "definitionVersion": "2.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Azure Backup should be enabled for Virtual Machines_2",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/013e242c-8828-4970-87b3-ab247555486d",
+        "definitionVersion": "3.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Basic Cybersecurity hygine"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Accounts with owner permissions on Azure resources should be MFA enabled_2",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Accounts with write permissions on Azure resources should be MFA enabled_2",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/931e118d-50a1-4457-a5e4-78550e086c52",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Review user groups and applications with access to sensitive data_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/eb1c944e-0e94-647b-9b7e-fdb8d2af0838",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Accounts with owner permissions on Azure resources should be MFA enabled_3",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e3e008c3-56b9-4133-8fd7-d3347377402a",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Guest accounts with owner permissions on Azure resources should be removed_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/339353f6-2387-4a45-abe4-7f529d121046",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      },
+      {
+        "policyDefinitionReferenceId": "Guest accounts with write permissions on Azure resources should be removed_1",
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/94e1c2ac-cbbe-4cac-a2b5-389c812dee87",
+        "definitionVersion": "1.*.*",
+        "parameters": {},
+        "groupNames": [
+          "Use of MFA or continious authentication"
+        ]
+      }
+    ],
+    "policyDefinitionGroups": [
+      {
+        "name": "Vulnerability Handling and disclosures",
+        "category": "NIS2",
+        "displayName": "Vulnerability Handling and disclosures"
+      },
+      {
+        "name": "Incident Handling",
+        "category": "NIS2",
+        "displayName": "Incident Handling",
+        "description": "Prevention, detection & response to incidents"
+      },
+      {
+        "name": "Use of cryptography and encryption",
+        "category": "NIS2",
+        "displayName": "Use of cryptography and encryption"
+      },
+      {
+        "name": "Business Continuity and Crisis Management",
+        "category": "NIS2",
+        "displayName": "Business Continuity and Crisis Management"
+      },
+      {
+        "name": "Supply Chain Security",
+        "category": "NIS2",
+        "displayName": "Supply Chain Security"
+      },
+      {
+        "name": "Basic Cybersecurity hygine",
+        "category": "NIS2",
+        "displayName": "Basic Cybersecurity hygine"
+      },
+      {
+        "name": "Use of MFA or continious authentication",
+        "category": "NIS2",
+        "displayName": "Use of MFA or continious authentication"
+      }
+    ],
+    "versions": [
+      "1.0.0"
+    ]
+  },
+  "id": "/subscriptions/1fc00f4d-a938-4e4c-96c5-6446cd536471/providers/Microsoft.Authorization/policySetDefinitions/2d4ac07e5cb946f2a241f3a9",
+  "type": "Microsoft.Authorization/policySetDefinitions",
+  "name": "2d4ac07e5cb946f2a241f3a9"
+  }
+}
